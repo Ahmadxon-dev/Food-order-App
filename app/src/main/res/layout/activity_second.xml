@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="#e7ebc7"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".secondActivity"
+        android:orientation="vertical"
+        android:background="#e7ebc7"
+        android:weightSum="6">
+
+
+
+        <!--..................................manu.....................................-->
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            android:weightSum="6"
+            android:layout_weight="1">
+
+            <!--burger menu-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3">
+                <View
+                    android:id="@+id/line_1"
+                    android:layout_width="29dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/line1"
+                    android:layout_marginTop="60px"
+                    android:layout_marginLeft="33dp"
+                    />
+
+                <View
+                    android:id="@+id/line_2"
+                    android:layout_width="24dp"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="6px"
+                    android:background="@drawable/line2"
+                    />
+                <View
+                    android:id="@+id/line_3"
+                    android:layout_width="20dp"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="6px"
+                    android:background="@drawable/line3"
+                    />
+
+            </LinearLayout>
+
+            <!--search icon-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <View
+                    android:id="@+id/search_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="50px"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/search_icon" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/txt2"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_goneMarginStart="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="33dp"
+            app:layout_constraintTop_toBottomOf="@id/menu">
+
+            <TextView
+                android:id="@+id/work_place"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Work Place"
+                android:textColor="#B3000000"
+                android:textSize="28dp"
+                app:layout_constraintRight_toLeftOf="@id/uchburchak"
+
+                />
+
+            <View
+                android:id="@+id/uchburchak"
+                android:layout_width="36dp"
+                android:layout_height="24dp"
+                android:background="@drawable/uchburchak"
+                android:layout_marginTop='9dp'
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/work_place"
+                app:layout_constraintTop_toBottomOf="@id/menu"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/p_text"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="33dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt2"
+            android:layout_marginTop="10dp"
+
+            >
+            <TextView
+                android:layout_width="238dp"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:text="Choose your delicious meal"
+                android:textColor='#B3000000'
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id='@+id/tabs'
+            app:layout_constraintTop_toBottomOf="@id/p_text"
+            android:layout_marginTop="22dp"
+            android:gravity='center'
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/rectangle_1"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:background="@drawable/green_rectangle">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="11dp"
+                    android:background="@drawable/house"
+
+                    android:padding="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grey_rectangle_heart"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="45dp"
+                android:background="@drawable/grey_rectangle"
+                >
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/heart"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="11dp"
+                    android:padding="20dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grey_rectangle_science"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="45dp"
+                android:background="@drawable/grey_rectangle"
+                >
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/science"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="11dp"
+                    android:padding="20dp"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/grey_rectangle_baby"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="45dp"
+                android:background="@drawable/grey_rectangle"
+                >
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/baby"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="11dp"
+                    android:padding="20dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/oval_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tabs"
+            android:layout_marginTop='30dp'
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/ovalsifat"
+                android:id="@+id/ovalsifat2"
+                android:layout_width="147dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="30dp"
+                >
+
+                <View
+                    android:background='@drawable/aylana'
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <Button
+                    android:id='@+id/salad_heart'
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    android:background='@drawable/heart'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <View
+                    android:layout_width="105.25dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/salad1"
+                    android:background='@drawable/salad'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='13dp'
+                    />
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="18dp"
+                    app:layout_constraintTop_toBottomOf="@id/salad1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:gravity="center"
+                    android:text="Veg salad"
+                    android:textColor='#000'
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:id='@+id/salad_id1'
+                    android:layout_marginLeft='9dp'
+                    android:layout_marginBottom='13dp'
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="16dp"
+                    android:id='@+id/salad_rs1'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginBottom='13dp'
+                    android:text="Rs."
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+
+                    android:layout_marginLeft='12dp'
+                    />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintLeft_toLeftOf="@id/salad_rs1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id1"
+                    android:id="@+id/salad_price"
+                    android:text='100.00'
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft='19dp'
+                    android:layout_marginBottom='13dp'
+                    app:layout_constraintVertical_bias="0.0"
+                    />
+
+                <View
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    android:background='@drawable/add'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='7dp'
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/ovalsifat"
+                android:id="@+id/ovalsifat1"
+                android:layout_width="147dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="30dp"
+                >
+
+                <View
+                    android:background='@drawable/aylana'
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <Button
+                    android:id='@+id/rise_heart'
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    android:background='@drawable/heart'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <View
+                    android:layout_width="105.25dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/salad"
+                    android:background='@drawable/rise'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='13dp'
+                    />
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="18dp"
+                    app:layout_constraintTop_toBottomOf="@+id/salad"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:gravity="start"
+                    android:text="Rise"
+                    android:textColor='#000'
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:id='@+id/salad_id'
+                    android:layout_marginLeft='9dp'
+                    android:layout_marginBottom='13dp'
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="16dp"
+                    android:id='@+id/salad_rs'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginBottom='13dp'
+                    android:text="Rs."
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+
+                    android:layout_marginLeft='12dp'
+                    />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintLeft_toLeftOf="@id/salad_rs"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id"
+                    android:text='180.00'
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft='19dp'
+                    android:layout_marginBottom='13dp'
+                    android:id='@+id/rise_price'
+                    app:layout_constraintVertical_bias="0.0"
+                    />
+
+                <View
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    android:background='@drawable/add'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='7dp'
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/oval_parent2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/oval_parent"
+            android:layout_marginTop='25dp'
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/ovalsifat"
+                android:id="@+id/ovalsifat3"
+                android:layout_width="147dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="30dp"
+                >
+
+                <View
+                    android:background='@drawable/aylana'
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <Button
+                    android:layout_width="34.44dp"
+                    android:id='@+id/chicken_heart'
+                    android:layout_height="36dp"
+                    android:background='@drawable/heart'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <View
+                    android:layout_width="105.25dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/salad3"
+                    android:background='@drawable/chicken'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='13dp'
+                    />
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="18dp"
+                    app:layout_constraintTop_toBottomOf="@id/salad3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:gravity="left"
+                    android:text="Fried Chicken"
+                    android:textColor='#000'
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:id='@+id/salad_id3'
+                    android:layout_marginLeft='12dp'
+                    android:layout_marginBottom='13dp'
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="16dp"
+                    android:id='@+id/salad_rs3'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginBottom='13dp'
+                    android:text="Rs."
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+
+                    android:layout_marginLeft='12dp'
+                    />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintLeft_toLeftOf="@id/salad_rs3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id3"
+                    android:text='150.00'
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft='19dp'
+                    android:layout_marginBottom='13dp'
+                    android:id='@+id/chicken_price'
+                    app:layout_constraintVertical_bias="0.0"
+                    />
+
+                <View
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    android:background='@drawable/add'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='7dp'
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/ovalsifat"
+                android:id="@+id/ovalsifat4"
+                android:layout_width="147dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="30dp"
+                >
+
+                <View
+                    android:background='@drawable/aylana'
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <Button
+                    android:id='@+id/shaverma_heart'
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    android:background='@drawable/heart'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginTop='7dp'
+                    />
+
+                <View
+                    android:layout_width="105.25dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/salad4"
+                    android:background='@drawable/shaverma'
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='13dp'
+                    />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="18dp"
+                    app:layout_constraintTop_toBottomOf="@+id/salad4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:gravity="center"
+                    android:text="Shawarma"
+                    android:textColor='#000'
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:id='@+id/salad_id4'
+                    android:layout_marginLeft='9dp'
+                    android:layout_marginBottom='13dp'
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="16dp"
+                    android:id='@+id/salad_rs4'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginBottom='13dp'
+                    android:text="Rs."
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+
+                    android:layout_marginLeft='12dp'
+                    />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintLeft_toLeftOf="@id/salad_rs4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/salad_id4"
+                    android:text='220.00'
+                    android:textColor='#3FC979'
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft='19dp'
+                    android:layout_marginBottom='13dp'
+                    app:layout_constraintVertical_bias="0.0"
+                    android:id='@+id/shaverma_price'
+                    />
+
+                <View
+                    android:layout_width="34.44dp"
+                    android:layout_height="36dp"
+                    android:background='@drawable/add'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight='6dp'
+                    android:layout_marginBottom='7dp'
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="horizontal"
+            android:id="@+id/total_parent"
+            android:layout_width="310dp"
+            android:layout_height="42dp"
+            android:layout_marginTop='25dp'
+            app:layout_constraintTop_toBottomOf="@id/oval_parent2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/total_bg"
+            >
+
+
+            <TextView
+                android:id='@+id/item_numbers'
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft='20dp'
+
+                android:text='0'
+                android:textColor='#fff'
+                android:textStyle='bold'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.107"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.666" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="4dp"
+                android:text='items'
+                android:textColor='#fff'
+
+                android:textStyle='bold'
+
+
+                app:layout_constraintBottom_toBottomOf='parent'
+                app:layout_constraintLeft_toLeftOf="@id/item_numbers" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="88dp"
+                android:layout_marginBottom="4dp"
+                android:text='Rs.'
+                android:textColor='#fff'
+                android:textStyle='bold'
+                app:layout_constraintBottom_toBottomOf='parent'
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id='@+id/total_sum'
+                android:layout_width="46dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="4dp"
+                android:gravity='end'
+                android:text='0'
+                android:textColor='#fff'
+                android:textStyle='bold'
+
+
+                app:layout_constraintBottom_toBottomOf='parent'
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

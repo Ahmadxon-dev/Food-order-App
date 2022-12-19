@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#3fc979"
+    android:icon='@drawable/add'
+    >
+
+    <View
+        android:id="@+id/first_page_img"
+        android:layout_width="283dp"
+        android:layout_height="272dp"
+        android:background="@drawable/first_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169" />
+
+
+    <TextView
+        android:layout_width="309dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Food Ordering App"
+        android:textColor='#fff'
+        android:textFontWeight="700"
+        android:textSize="30dp"
+        app:fontFamily="@font/work_sans_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.626" />
+
+    <Button
+        android:id="@+id/button_mainpg"
+        android:layout_width="309dp"
+        android:layout_height="61dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="592dp"
+        android:background="@drawable/first_button"
+        android:gravity="center"
+        android:text="Get Meal"
+        android:textFontWeight="700"
+        android:textSize="24sp"
+        app:fontFamily="@font/work_sans_bold"
+        app:layout_constraintBottom_toBottomOf="@id/first_page_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
